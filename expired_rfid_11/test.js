@@ -7,9 +7,9 @@ const expect = chai.expect;
 startTrans = require('../remote_start_stop/remote_start').triggerRemoteStart;
 stopTrans = require('../remote_start_stop/remote_stop').triggerRemoteStop;
 
-const connectorId = require('./variables').connectorId;
-const rfidTag = require('./variables').rfidTag;
-const chargePoint = require('./variables').chargePoint;
+const connectorId = 3;
+const rfidTag = "SUPRFID123";
+const chargePoint = "Testcharge001";
 
 let ex_key = false;
 
@@ -23,14 +23,13 @@ describe('-----Test Case - 011-----', function () {
                 chunk = chunk.toString();
                 console.log(`simulator says: ${chunk}`);
 
-                if (chunk.includes(`Waiting for Remote Start for ${chargePoint}'s Connector ${connectorId.toString()}`)) {
+                if (chunk.includes("Waiting for Remote Start")) {
                     startTrans(connectorId, rfidTag, chargePoint);
                 }
 
-                if(chunk.includes(`Error when starting charging for ${chargePoint}'s connector ${connectorId.toString()}`)){
+                if(chunk.includes("Error when starting charging")){
 
                     ex_key = true;
-                  
                 }
                 
                 if(ex_key === true && chunk.includes("status")){
@@ -44,11 +43,10 @@ describe('-----Test Case - 011-----', function () {
                     done();
                 }
 
-                if(chunk.includes(`Waiting for Remote Stop for ${chargePoint}'s Connector ${connectorId.toString()}`)){
+                if(chunk.includes("Starting charging")){
 
                     stopSim();
                     expect(chunk).to.include('Expired');
-                  
                 }
             });
 

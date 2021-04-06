@@ -4772,3 +4772,29 @@
 {"cpID":"Testcharge001","connID":"3","message":[2,"f2cfdfc0-168b-49f5-926f-664489ff70d3","RemoteStopTransaction",{"transactionId":3424}]}
 {"cpID":"Testcharge001","connID":3,"message":[3,"f2cfdfc0-168b-49f5-926f-664489ff70d3",{"status":"Accepted"}]}
 {"cpID":"Testcharge001","connID":null,"message":[2,1617458670066,"Heartbeat",{}]}
+{"cpID":"Testcharge001","connID":null,"message":[2,1617690861339,"BootNotification",{"chargePointVendor":"Numocity","chargePointModel":"HybridModel4C","chargePointSerialNumber":"","chargeBoxSerialNumber":"cpsn001","firmwareVersion":"1.0.49","iccid":"","imsi":"","meterType":"DBT NQC-ACDC","meterSerialNumber":"gir.vat.mx.000e48"}]}
+{"cpID":"Testcharge001","connID":null,"message":[3,"1617690861339",{"currentTime":"2021-04-06T06:34:21.556Z","interval":60,"status":"Accepted"}]}
+{"cpID":"Testcharge001","connID":3,"message":[2,1617690863647,"StatusNotification",{"connectorId":3,"errorCode":"NoError","info":"NoInfo","status":"Available","timestamp":"2021-04-06T06:34:23.647Z","vendorErrorCode":"","vendorId":""}]}
+{"cpID":"Testcharge001","connID":3,"message":[3,"1617690863647",{}]}
+{"cpID":"Testcharge001","connID":3,"message":[2,1617690865978,"StatusNotification",{"connectorId":3,"errorCode":"NoError","info":"NoInfo","status":"Preparing","timestamp":"2021-04-06T06:34:25.978Z","vendorErrorCode":"","vendorId":""}]}
+{"cpID":"Testcharge001","connID":3,"message":[3,"1617690865978",{}]}
+{"cpID":"Testcharge001","connID":3,"message":[2,1617690868297,"BootNotification",{"chargePointVendor":"Numocity","chargePointModel":"HybridModel4C","chargePointSerialNumber":"","chargeBoxSerialNumber":"cpsn001","firmwareVersion":"1.0.49","iccid":"","imsi":"","meterType":"DBT NQC-ACDC","meterSerialNumber":"gir.vat.mx.000e48"}]}
+{"cpID":"Testcharge001","connID":3,"message":[3,"1617690868297",{"currentTime":"2021-04-06T06:34:28.503Z","interval":60,"status":"Accepted"}]}
+{"cpID":"Testcharge001","connID":3,"message":[2,"302259e7-895a-4986-b882-b6da96cc8f48","RemoteStartTransaction",{"connectorId":3,"idTag":"SUPRFID123"}]}
+{"cpID":"Testcharge001","connID":3,"message":[3,"302259e7-895a-4986-b882-b6da96cc8f48",{"status":"Accepted"}]}
+{"cpID":"Testcharge001","connID":3,"message":[2,1617690878721,"StartTransaction",{"connectorId":3,"idTag":"SUPRFID123","timestamp":"2021-04-06T06:34:38.721Z","meterStart":0,"reservationId":0}]}
+{"cpID":"Testcharge001","connID":3,"message":[3,"1617690878721",{"idTagInfo":{"expiryDate":"2021-04-06T06:34:38.913Z","parentIdTag":"Numocity","status":"Accepted"},"transactionId":3511}]}
+{"cpID":"Testcharge001","connID":3,"message":[2,1617690881082,"StatusNotification",{"connectorId":3,"errorCode":"NoError","info":"NoInfo","status":"Charging","timestamp":"2021-04-06T06:34:41.082Z","vendorErrorCode":"","vendorId":""}]}
+{"cpID":"Testcharge001","connID":3,"message":[3,"1617690881082",{}]}
+{"cpID":"Testcharge001","connID":3,"message":[2,1617690883401,"MeterValues",{"connectorId":3,"transactionId":3511,"meterValue":[{"timestamp":"2021-04-06T06:34:43.403Z","sampledValue":[{"context":"Sample.Periodic","format":"Raw","measurand":"SoC","location":"EV","unit":"Percent","phase":null,"value":"0"}]},{"timestamp":"2021-04-06T06:34:43.403Z","sampledValue":[{"value":"0","context":"Sample.Periodic","format":"Raw","measurand":"Energy.Active.Import.Register","phase":"L1","location":"Outlet","unit":"kWh"}]}]}]}
+{"cpID":"Testcharge001","connID":3,"message":[3,"1617690883401",{}]}
+{"cpID":"Testcharge001","connID":null,"message":[2,1617690891650,"Heartbeat",{}]}
+{"cpID":"Testcharge001","connID":null,"message":[3,"1617690891650",{"currentTime":"2021-04-06T06:34:51.850Z"}]}
+{"cpID":"Testcharge001","connID":3,"message":[2,1617690893406,"MeterValues",{"connectorId":3,"transactionId":3511,"meterValue":[{"timestamp":"2021-04-06T06:34:53.406Z","sampledValue":[{"context":"Sample.Periodic","format":"Raw","measurand":"SoC","location":"EV","unit":"Percent","phase":null,"value":"0"}]},{"timestamp":"2021-04-06T06:34:53.406Z","sampledValue":[{"value":"0.1","context":"Sample.Periodic","format":"Raw","measurand":"Energy.Active.Import.Register","phase":"L1","location":"Outlet","unit":"kWh"}]}]}]}
+{"cpID":"Testcharge001","connID":3,"message":[3,"1617690893406",{}]}
+{"cpID":"Testcharge001","connID":3,"message":[2,1617690903418,"MeterValues",{"connectorId":3,"transactionId":3511,"meterValue":[{"timestamp":"2021-04-06T06:35:03.418Z","sampledValue":[{"context":"Sample.Periodic","format":"Raw","measurand":"SoC","location":"EV","unit":"Percent","phase":null,"value":"0"}]},{"timestamp":"2021-04-06T06:35:03.418Z","sampledValue":[{"value":"0.2","context":"Sample.Periodic","format":"Raw","measurand":"Energy.Active.Import.Register","phase":"L1","location":"Outlet","unit":"kWh"}]}]}]}
+{"cpID":"Testcharge001","connID":3,"message":[3,"1617690903418",{}]}
+{"cpID":"Testcharge001","connID":3,"message":[2,1617690913428,"MeterValues",{"connectorId":3,"transactionId":3511,"meterValue":[{"timestamp":"2021-04-06T06:35:13.428Z","sampledValue":[{"context":"Sample.Periodic","format":"Raw","measurand":"SoC","location":"EV","unit":"Percent","phase":null,"value":"0"}]},{"timestamp":"2021-04-06T06:35:13.428Z","sampledValue":[{"value":"0.75","context":"Sample.Periodic","format":"Raw","measurand":"Energy.Active.Import.Register","phase":"L1","location":"Outlet","unit":"kWh"}]}]}]}
+{"cpID":"Testcharge001","connID":3,"message":[3,"1617690913428",{}]}
+{"cpID":"Testcharge001","connID":null,"message":[2,1617690921654,"Heartbeat",{}]}
+{"cpID":"Testcharge001","connID":null,"message":[3,"1617690921654",{"currentTime":"2021-04-06T06:35:21.851Z"}]}

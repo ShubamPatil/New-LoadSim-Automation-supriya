@@ -7,9 +7,10 @@ const expect = chai.expect;
 startTrans = require('../remote_start_stop/remote_start').triggerRemoteStart;
 stopTrans = require('../remote_start_stop/remote_stop').triggerRemoteStop;
 
-const connectorId = require('./variables').connectorId;
-const rfidTag = require('./variables').rfidTag;
-const chargePoint = require('./variables').chargePoint;
+const connectorId = 3;
+const rfidTag = "SUPRFID123";
+const chargePoint = "Testcharge001";
+
 let t_flag = true;
 let trans = "";
 let count_start = false;
@@ -26,7 +27,7 @@ describe('-----Test Case - 002-----', function () {
                 chunk = chunk.toString();
                 console.log(`simulator says: ${chunk}`);
 
-                if (chunk.includes(`Waiting for Remote Start for ${chargePoint}'s Connector ${connectorId.toString()}`)) {
+                if (chunk.includes("Waiting for Remote Start")) {
                     startTrans(connectorId, rfidTag, chargePoint);
                 }
 
@@ -35,9 +36,9 @@ describe('-----Test Case - 002-----', function () {
                     t_flag = false;
                 }
 
-                if (chunk.includes(`Waiting for Remote Stop for ${chargePoint}'s Connector ${connectorId}`)) {
+                if (chunk.includes("Waiting for Remote Stop")) {
                     count_start = true;
-                    stopTrans(chargePoint, trans); // Giving invalid Transaction Id for Remote Stop
+                    stopTrans(chargePoint, trans+10); // Giving invalid Transaction Id for Remote Stop
                 }
 
                 if (count >= 0 && count_start === true) {
