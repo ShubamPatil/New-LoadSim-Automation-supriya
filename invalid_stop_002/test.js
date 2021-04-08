@@ -38,22 +38,21 @@ describe('-----Test Case - 002-----', function () {
 
                 if (chunk.includes("Waiting for Remote Stop")) {
                     count_start = true;
-                    stopTrans(chargePoint, trans+10); // Giving invalid Transaction Id for Remote Stop
+                    stopTrans(chargePoint, trans); // Giving invalid Transaction Id for Remote Stop
                 }
 
                 if (count >= 0 && count_start === true) {
                     if ((chunk.includes("transactionId"))) {
-                        console.log("\n\nRemote Stop happened... \nHence our test case failed..\n\n");
-                        don_val = 'failed';
+                       
                         count_start = false;
-                        expect(chunk).to.not.include("transactionId");
+                        stopSim();
+                        expect.fail("Case failing as remote stop happened successfully");
                     }
                     else {
                         count -= 1
                     }
                 }
                 else if (count < 0 && count_start === true) {
-                    //console.log(count, count_start);
                     console.log("\n\nRemote stop transaction is unsuccessful...\n So charging cannot be stopped... \n\n");
                     don_val = true;
                     expect(chunk).to.not.include("transactionId");
@@ -63,9 +62,7 @@ describe('-----Test Case - 002-----', function () {
                     stopSim();
                     done();
                 }
-                else if(don_val === 'failed'){
-                    stopSim();
-                }
+                
             });
 
         }

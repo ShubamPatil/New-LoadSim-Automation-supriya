@@ -46,7 +46,7 @@ describe('-----Test Case - 011-----', function () {
                 if(chunk.includes("Starting charging")){
 
                     stopSim();
-                    expect(chunk).to.include('Expired');
+                    expect.fail("Failing the case as the charging started");
                 }
             });
 
